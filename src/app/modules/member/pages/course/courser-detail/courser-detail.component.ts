@@ -33,7 +33,7 @@ export class CourserDetailComponent {
         this.ssrService.setTransferData('course', response);
       },
       error: () =>
-        this.ssrService.setTransferData('course', { error: 'DEU RUIM' }),
+        this.ssrService.setTransferData('course', { error: 'DEU RUIM ?' }),
     });
   }
 
