@@ -7,10 +7,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "dev:ssr": "ng run test:serve-ssr",
+    "dev:ssr": "ng run courses-ui:serve-ssr",
     "serve:ssr": "node dist/courses-ui/server/main.js",
-    "build:ssr": "ng build && ng run test:server",
-    "prerender": "ng run test:prerender",
+    "build:ssr": "ng build && ng run courses-ui:server",
+    "prerender": "ng run courses-ui:prerender",
     "vercel-build": "npm run build:ssr"
   },
   "private": true,
