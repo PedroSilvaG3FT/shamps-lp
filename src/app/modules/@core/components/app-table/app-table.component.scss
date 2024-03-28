@@ -1,0 +1,23 @@
+@import "variables";
+
+#app-table {
+  @apply p-2 rounded-xl;
+  background: $bg-secondary;
+
+  > h2 {
+    @apply m-4;
+  }
+
+  > section {
+    @apply w-full overflow-x-auto;
+  }
+
+  table {
+    @apply w-full;
+  }
+
+  .mat-header-action {
+    text-align: right !important;
+    padding-right: 34px !important;
+  }
+}

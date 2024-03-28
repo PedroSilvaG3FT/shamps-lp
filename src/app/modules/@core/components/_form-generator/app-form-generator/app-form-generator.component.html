@@ -1,0 +1,32 @@
+<form
+  novalidate
+  [id]="uniqueId"
+  [formGroup]="formGroup"
+  (ngSubmit)="handleSubmit()"
+  class="app-form-generator"
+>
+  <nav class="{{ actionPositionY }} {{ actionPositionX }}">
+    <button class="btn-primary" [disabled]="formGroup.invalid" type="submit">
+      {{ submitText }}
+    </button>
+  </nav>
+
+  <section>
+    @for (row of fields; track row) {
+    <article
+      [ngStyle]="{ gap: fieldGap }"
+      [ngClass]="{ column, 'mobile-column': mobileColumn }"
+    >
+      @for (item of row; track $index) {
+      <div [ngStyle]="{ width: item.width || defaultFieldWidth }">
+        <ng-container
+          appFieldGenerator
+          [group]="formGroup"
+          [field]="item"
+        ></ng-container>
+      </div>
+      }
+    </article>
+    }
+  </section>
+</form>

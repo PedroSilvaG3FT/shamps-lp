@@ -1,0 +1,22 @@
+<article id="app-slider" [class]="className" [formGroup]="currentGroup">
+  <label class="form-control-label">{{ label }}</label>
+
+  <section>
+    <span>{{ minValue }}</span>
+    <span>{{ maxValue }}</span>
+  </section>
+
+  <mat-slider
+    [min]="min"
+    [max]="max"
+    [step]="step"
+    [showTickMarks]="showTickMarks"
+  >
+    @if(!range) {
+    <input matSliderThumb [value]="min" [formControlName]="formControlName" />
+    } @else {
+    <input [value]="min" formControlName="min" matSliderStartThumb />
+    <input [value]="min" formControlName="max" matSliderEndThumb />
+    }
+  </mat-slider>
+</article>

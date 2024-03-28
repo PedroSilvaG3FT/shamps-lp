@@ -1,0 +1,16 @@
+<mat-form-field
+  id="app-textarea"
+  [class]="className"
+  [formGroup]="group"
+  [appearance]="appearance"
+>
+  <mat-label>{{ label }}</mat-label>
+  <textarea
+    matInput
+    [id]="id"
+    [name]="name"
+    [rows]="rows"
+    [placeholder]="placeholder"
+    [formControlName]="formControlName"
+  ></textarea>
+</mat-form-field>
