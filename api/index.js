@@ -1,3 +1,2 @@
-import app from "../dist/courses-ui/server/server.mjs";
-
-module.exports = app();
+const server = require("../dist/courses-ui/server/main");
+module.exports = server.app();
