@@ -32,7 +32,8 @@ export class CourserDetailComponent {
         this.ssrService.setSeoOptimization(response.seoOptimization);
         this.ssrService.setTransferData('course', response);
       },
-      error: () => this.ssrService.setTransferData('course', {}),
+      error: () =>
+        this.ssrService.setTransferData('course', { error: 'DEU RUIM' }),
     });
   }
 
