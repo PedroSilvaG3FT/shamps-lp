@@ -129,6 +129,14 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/courses-ui/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.app.json"
+          }
         }
       }
     }

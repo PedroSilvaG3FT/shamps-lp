@@ -8,9 +8,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "serve:ssr": "npm run build && node dist/courses-ui/server/server.mjs",
-    "dev:ssr": "ng run test:serve-ssr",
-    "build:ssr": "ng build && ng run test:server",
-    "prerender": "ng run test:prerender",
+    "dev:ssr": "ng run courses-ui:serve-ssr",
+    "build:ssr": "ng build && ng run courses-ui:server",
+    "prerender": "ng run courses-ui:prerender",
     "vercel-build": "npm run build:ssr"
   },
   "private": true,
