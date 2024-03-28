@@ -3,9 +3,9 @@
   "public": true,
   "name": "courses-ui",
   "devCommand": "node dist/courses-ui/server/server.mjs",
-  "rewrites": [{ "source": "/(.*)", "destination": "/dist/courses-ui" }],
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
   "functions": {
-    "dist/courses-ui/server.mjs": {
+    "api/index.js": {
       "includeFiles": "dist/courses-ui/browser/**"
     }
   }
