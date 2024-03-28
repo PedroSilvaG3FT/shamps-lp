@@ -36,7 +36,6 @@ export class SSRService {
     this.meta.updateTag({ name: 'title', content: data.title });
     this.meta.updateTag({ name: 'author', content: data.author });
     this.meta.updateTag({ name: 'publisher', content: data.publisher });
-    this.meta.updateTag({ property: 'og:image', content: data.ogImage });
     this.meta.updateTag({ property: 'og:title', content: data.ogTitle });
     this.meta.updateTag({ name: 'description', content: data.description });
     this.meta.updateTag({ name: 'keywords', content: data.keywords.join(',') });

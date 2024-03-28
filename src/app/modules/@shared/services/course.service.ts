@@ -18,7 +18,6 @@ export class CourseService {
           description: `Descubra mais de 50 deliciosas receitas de brigadeiro gourmet nesta apostila completa. Aprenda a fazer doces incríveis para festas e aumente sua renda extra em casa.`,
           seoOptimization: {
             author: 'John Due',
-            ogImage: 'URL_DA_IMAGEM',
             publisher: 'Galaxy cursos',
             title: `Apostila de Brigadeiro Gourmet: Mais de 50 Receitas para Renda Extra em Casa`,
             ogTitle: `Apostila de Brigadeiro Gourmet: Mais de 50 Receitas para Renda Extra em Casa`,
