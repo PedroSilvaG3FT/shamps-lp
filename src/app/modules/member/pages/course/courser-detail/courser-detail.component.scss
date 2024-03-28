@@ -1,0 +1,26 @@
+@import "variables";
+
+#course-detail {
+  @apply flex flex-col items-start;
+
+  > h1 {
+    @apply font-semibold text-xl;
+  }
+
+  > h2 {
+    @apply font-semibold text-lg;
+  }
+
+  > p {
+    @apply my-2;
+  }
+
+  > hr {
+    @apply my-4;
+  }
+
+  > pre {
+    @apply w-full text-sm p-4 rounded-2xl overflow-x-auto;
+    background: $bg-secondary;
+  }
+}

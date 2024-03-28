@@ -1,1 +1,10 @@
-<p>courser-detail works!</p>
+<section id="course-detail" class="app-container">
+  <h1>Detalhe do curso</h1>
+  <h2>{{ course.name }}</h2>
+  <p>{{ course.description }}</p>
+  <a [href]="course.link" target="_blank" class="btn-primary">Adquira já</a>
+
+  <hr />
+
+  <pre>{{ course | json }}</pre>
+</section>

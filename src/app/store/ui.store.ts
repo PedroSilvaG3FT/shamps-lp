@@ -3,7 +3,7 @@ import { ThemeType } from '../modules/@core/types/theme.type';
 
 export const UiStore = signalStore(
   { providedIn: 'root' },
-  withState({ theme: 'dark' }),
+  withState({ theme: 'light' }),
   withMethods((store) => ({
     setTheme(theme: ThemeType) {
       patchState(store, { theme });
