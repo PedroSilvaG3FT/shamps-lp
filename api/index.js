@@ -1,3 +1,3 @@
-const server = require("../dist/courses-ui/server/main");
-
-module.exports = server;
+export default import("../dist/angular-vercel-ssr/server/server.mjs").then(
+  (module) => module.app()
+);
