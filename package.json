@@ -7,8 +7,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "serve:ssr": "npm run build && node dist/courses-ui/server/server.mjs",
-    "build:ssr": "npm run build && node api/index.js"
+    "dev:ssr": "npm run build && node dist/courses-ui/server/server.mjs",
+    "build:ssr": "npm run build && ng run courses-ui:server",
+    "serve:ssr": "node dist/courses-ui/server/main.js",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {

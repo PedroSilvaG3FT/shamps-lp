@@ -1,3 +1,3 @@
-const server = require("../dist/courses-ui/server/server.mjs");
+const server = require("../dist/courses-ui/server/main");
 
 module.exports = server.app();

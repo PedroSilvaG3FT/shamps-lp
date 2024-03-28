@@ -2,7 +2,6 @@
   "version": 2,
   "public": true,
   "name": "courses-ui",
-  "devCommand": "node dist/courses-ui/server/server.mjs",
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
   "functions": {
     "api/index.js": {
