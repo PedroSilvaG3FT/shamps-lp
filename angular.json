@@ -19,10 +19,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:server",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/courses-ui",
-            "main": "src/main.ts",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
@@ -96,12 +98,41 @@
           },
           "defaultConfiguration": "production"
         },
-        "serve-ssr": {
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "courses-ui:build:production"
+            },
+            "development": {
+              "buildTarget": "courses-ui:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "courses-ui:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": [],
+            "scripts": []
+          }
+        },
+        "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/courses-ui",
-            "main": "src/main.server.ts",
+            "outputPath": "dist/courses-ui/server",
             "tsConfig": "tsconfig.app.json",
+            "main": "src/main.server.ts",
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src/app/styles",
@@ -109,12 +140,7 @@
                 "src/app/styles/mixins"
               ]
             }
-          },
-          "configurations": {
-            "production": {},
-            "development": {}
-          },
-          "defaultConfiguration": "development"
+          }
         }
       }
     }
