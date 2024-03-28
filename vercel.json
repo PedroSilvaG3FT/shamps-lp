@@ -5,7 +5,7 @@
   "devCommand": "node dist/courses-ui/server/server.mjs",
   "rewrites": [{ "source": "/(.*)", "destination": "/dist/courses-ui" }],
   "functions": {
-    "api/index.js": {
+    "dist/courses-ui/server.mjs": {
       "includeFiles": "dist/courses-ui/browser/**"
     }
   }
