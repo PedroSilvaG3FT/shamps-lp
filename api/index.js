@@ -1,3 +1,3 @@
-import app from "../dist/server/server.mjs";
+import app from "../dist/courses-ui/server/server.mjs";
 
 module.exports = app();
