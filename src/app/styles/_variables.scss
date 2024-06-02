@@ -2,10 +2,19 @@
 @import "functions/index";
 
 :root {
-  --bg-primary: #f6f6f6;
-  --bg-secondary: #fff;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f7f7;
   --text-primary: #313131;
 }
+
+// THEME
+$light-bg-primary: #ffffff;
+$light-bg-secondary: #f7f7f7;
+$light-text-primary: #313131;
+
+$dark-bg-primary: #111418;
+$dark-bg-secondary: #0f1924;
+$dark-text-primary: #fff;
 
 // GLOBAL
 $white: #fff;
@@ -21,15 +30,6 @@ $secondary: map-get($secondary-palette, 500);
 $bg-primary: var(--bg-primary);
 $bg-secondary: var(--bg-secondary);
 $text-primary: var(--text-primary);
-
-// THEME
-$light-bg-primary: #f6f6f6;
-$light-bg-secondary: #fff;
-$light-text-primary: #313131;
-
-$dark-bg-primary: #111418;
-$dark-bg-secondary: #0f1924;
-$dark-text-primary: #fff;
 
 // GRADIENT
 $circular-gradient: radial-gradient(circle, $primary 0%, $secondary 100%);

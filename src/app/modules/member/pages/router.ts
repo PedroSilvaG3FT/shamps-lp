@@ -10,6 +10,12 @@ export const MEMBER_ROUTES: Routes = [
       ),
     children: [
       {
+        path: '',
+        data: { id: 'home', title: 'Home' },
+        loadComponent: () =>
+          import('./home/home.component').then((c) => c.HomeComponent),
+      },
+      {
         path: 'cursos',
         data: { id: 'course', title: 'Cursos' },
         loadComponent: () =>

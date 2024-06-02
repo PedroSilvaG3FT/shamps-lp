@@ -2,8 +2,8 @@ import { ThemeConfigType } from '../types/theme.type';
 
 export const THEME_CONFIG: ThemeConfigType = {
   light: {
-    bgPrimary: '#f6f6f6',
-    bgSecondary: '#fff',
+    bgPrimary: '#FFFFFF',
+    bgSecondary: '#F7F7F7',
     textPrimary: '#313131',
   },
   dark: {
