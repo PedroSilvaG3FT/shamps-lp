@@ -5,4 +5,4 @@ User-agent: *
 User-agent: *
 Allow: /
 
-Sitemap: https://comforting-donut-f0bf50.netlify.app//sitemap.xml
+Sitemap: https://shamps.netlify.app/sitemap.xml
