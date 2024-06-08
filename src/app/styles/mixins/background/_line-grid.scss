@@ -1,0 +1,6 @@
+@mixin pattern-bg-grid($primary, $secondary) {
+  background-image: linear-gradient(#{$secondary} 2px, transparent 2px),
+    linear-gradient(to right, #{$secondary} 2px, transparent 2px);
+  background-size: 43px 43px;
+  background-color: #{$primary};
+}

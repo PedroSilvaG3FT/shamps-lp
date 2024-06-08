@@ -4,6 +4,10 @@
 @import "variables";
 @import "mixins/text-editor";
 
+$mat-typography: mat.define-typography-config(
+  $font-family: "Poppins, sans-serif",
+);
+
 .light {
   color: $light-text-primary;
   background: $light-bg-primary;
@@ -17,16 +21,19 @@
 
   @include set-text-editor-theme($light-bg-secondary, $light-text-primary);
 
-  @include mat.all-component-themes(
-    generate-theme(
-      mat.define-palette($primary-palette, 500),
-      mat.define-palette($secondary-palette, 300, 100, 500),
-      mat.define-palette($danger-palette),
-      $light-background,
-      $light-foreground,
-      false
-    )
+  $light-theme: (
+    color: (
+      primary: mat.define-palette($primary-palette, 500),
+      accent: mat.define-palette($secondary-palette, 300, 100, 500),
+      warn: mat.define-palette($danger-palette),
+      background: $light-background,
+      foreground: $light-foreground,
+    ),
+    typography: $mat-typography,
+    density: 0,
   );
+
+  @include mat.all-component-themes($light-theme);
 }
 
 .dark {
@@ -42,14 +49,17 @@
 
   @include set-text-editor-theme($dark-bg-secondary, $dark-text-primary);
 
-  @include mat.all-component-themes(
-    generate-theme(
-      mat.define-palette($primary-palette, 500),
-      mat.define-palette($secondary-palette, 300, 100, 500),
-      mat.define-palette($danger-palette),
-      $dark-background,
-      $dark-foreground,
-      true
-    )
+  $dark-theme: (
+    color: (
+      primary: mat.define-palette($primary-palette, 500),
+      accent: mat.define-palette($secondary-palette, 300, 100, 500),
+      warn: mat.define-palette($danger-palette),
+      background: $dark-background,
+      foreground: $dark-foreground,
+    ),
+    typography: $mat-typography,
+    density: 0,
   );
+
+  @include mat.all-component-themes($dark-theme);
 }

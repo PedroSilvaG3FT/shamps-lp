@@ -1,0 +1,48 @@
+<footer id="landing-page-footer">
+  <section class="app-container">
+    <section>
+      <article>
+        <img
+          src="/assets/images/shamps-logo.png"
+          alt="Roneey Shamps"
+          [routerLink]="['/']"
+        />
+
+        <p>
+          <i> "Somos fortes e corajosos." <small>Josué 1:9</small> </i>
+        </p>
+
+        <app-social-media ngSkipHydration />
+      </article>
+
+      <div>
+        <h5>Mapa do site</h5>
+        <a>Home</a>
+        <a>Propostas</a>
+        <a>Sobre mim</a>
+        <a>Contato</a>
+      </div>
+
+      <div>
+        <h5>Institucional</h5>
+        <a>Sobre mim</a>
+      </div>
+
+      <div>
+        <h5>Atendimento</h5>
+        <a>Contato</a>
+      </div>
+
+      <div>
+        <h5>Social</h5>
+        @for (item of socialMediaItems; track $index) {
+        <a [href]="item.link" target="_blank">{{ item.title }}</a>
+        }
+      </div>
+    </section>
+
+    <div>
+      <h5>Desenvolvido em parceria com:</h5>
+    </div>
+  </section>
+</footer>

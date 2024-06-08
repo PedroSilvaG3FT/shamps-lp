@@ -1,11 +1,11 @@
 export const FIREBASE_CONFIG = {
-  projectId: 'courses-db-5b2e9',
-  measurementId: 'G-EZB9B36T9C',
-  messagingSenderId: '973051201652',
-  storageBucket: 'courses-db-5b2e9.appspot.com',
-  authDomain: 'courses-db-5b2e9.firebaseapp.com',
-  apiKey: 'AIzaSyAbna_BTrBnVOBJTo0YIu-xc_5y3EjqxiQ',
-  appId: '1:973051201652:web:c9d93aee174f0cf3dce921',
+  projectId: 'shamps-lp',
+  measurementId: 'G-485ZBPNZ98',
+  messagingSenderId: '482002981849',
+  storageBucket: 'shamps-lp.appspot.com',
+  authDomain: 'shamps-lp.firebaseapp.com',
+  apiKey: 'AIzaSyBNa8PrVa2UoD-RjZLE9I3YwTOXA3YkJy0',
+  appId: '1:482002981849:web:af45d3ad217729dbf73fc8',
 };
 
 export const FIREBASE_CONFIG_STAGING = FIREBASE_CONFIG;

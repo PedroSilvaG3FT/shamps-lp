@@ -1,0 +1,24 @@
+<section class="app-container" id="landing-page-proposals">
+  <app-landing-page-section-title
+    [title]="'Propostas'"
+    description="Confira algumas das propostas que tenho para promover mudanças positivas em nosso município"
+  />
+
+  <section>
+    @for (item of proposals; track $index;) {
+    <article
+      animate
+      animationScroll
+      [delay]="$index * 200"
+      animation="animate__zoomIn"
+    >
+      <figure>
+        <span class="iconify" [attr.data-icon]="item.icon"></span>
+      </figure>
+
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+    </article>
+    }
+  </section>
+</section>

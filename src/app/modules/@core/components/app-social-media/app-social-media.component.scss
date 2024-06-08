@@ -1,0 +1,13 @@
+@import "variables";
+
+#app-social-media {
+  @apply flex gap-4 items-center;
+
+  > a {
+    @apply cursor-pointer text-lg transition-all duration-300;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

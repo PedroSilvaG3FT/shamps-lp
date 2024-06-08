@@ -10,7 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: "./src/main.server.ts",
       output: {
-        dir: "./dist/courses-ui/server",
+        dir: "./dist/shamps-lp/server",
         format: "cjs",
       },
       plugins: [VitePluginSass()],

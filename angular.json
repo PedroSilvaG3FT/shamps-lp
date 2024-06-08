@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "courses-ui": {
+    "shamps-lp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -21,7 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/courses-ui",
+            "outputPath": "dist/shamps-lp",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -102,10 +102,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "courses-ui:build:production"
+              "buildTarget": "shamps-lp:build:production"
             },
             "development": {
-              "buildTarget": "courses-ui:build:development"
+              "buildTarget": "shamps-lp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -113,7 +113,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "courses-ui:build"
+            "buildTarget": "shamps-lp:build"
           }
         },
         "test": {
@@ -130,7 +130,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/courses-ui/server",
+            "outputPath": "dist/shamps-lp/server",
             "tsConfig": "tsconfig.app.json",
             "main": "src/main.server.ts",
             "stylePreprocessorOptions": {

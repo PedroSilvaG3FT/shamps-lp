@@ -1,0 +1,27 @@
+<section class="app-container" id="landing-page-contact">
+  <section>
+    <app-landing-page-section-title
+      [title]="'Quero te ouvir'"
+      description="Sua opinião é fundamental para construir uma cidade melhor para todos!"
+    />
+
+    <p animate animationScroll animation="animate__fadeIn">
+      Estou comprometido em ouvir e atender às necessidades da nossa comunidade.
+      Quero saber suas ideias, propostas e sugestões para melhorar nossa cidade.
+      Este é um espaço aberto para você compartilhar suas preocupações,
+      iniciativas e soluções que podem fazer a diferença.
+    </p>
+
+    <article animate animationScroll animation="animate__fadeIn">
+      <app-form-generator
+        mobileColumn
+        actionPositionX="right"
+        [fields]="form.fields"
+        [formGroup]="form.group"
+        actionPositionY="bottom"
+        submitText="Enviar minha sugestão"
+        (onSubmit)="handleSubmit($event)"
+      />
+    </article>
+  </section>
+</section>

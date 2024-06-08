@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins/background";
+
+#landing-page-contact {
+  @apply mobile:px-0;
+
+  > section {
+    @apply p-10 pb-12 rounded-xl shadow-md mobile:px-8 mobile:rounded-none;
+    @include pattern-bg-plus(#fbcb1f, #fec700);
+
+    > p {
+      @apply mb-8;
+    }
+
+    > article {
+      @apply w-2/4 mobile:w-full tablet:w-full;
+    }
+  }
+}

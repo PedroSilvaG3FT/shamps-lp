@@ -1,0 +1,85 @@
+@import "variables";
+@import "mixins/background";
+
+@mixin set-animation($position, $delay) {
+  animation: title-animation 4s ease-in-out infinite $delay;
+
+  @keyframes title-animation {
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: $position;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+}
+
+#landing-page-hero {
+  @apply tablet:p-0;
+
+  > section {
+    @apply h-[440px] relative rounded-2xl px-20 flex justify-between;
+    @apply tablet:h-auto tablet:flex-col tablet:pt-12 tablet:px-4 tablet:rounded-none;
+    @include pattern-bg-grid($primary, #0061b0);
+
+    > img {
+      @apply h-12 absolute bottom-4 right-4 tablet:h-10 tablet:bottom-2;
+    }
+
+    > figure,
+    > article {
+      @apply flex flex-col;
+    }
+
+    > article {
+      color: #fff;
+      @apply justify-center tablet:w-full tablet:mb-6;
+
+      > p {
+        @apply mt-4 text-right italic;
+        @apply tablet:text-center;
+
+        > br {
+          @apply tablet:hidden;
+        }
+      }
+
+      > nav {
+        h1,
+        h3,
+        h5 {
+          @apply m-0 leading-[52px] text-right tablet:text-center;
+        }
+
+        h5 {
+          @apply flex gap-4 tablet:gap-0 tablet:flex-col tablet:items-center;
+
+          > img {
+            @apply w-14 object-contain relative;
+            @include set-animation(-12px, 0ms);
+          }
+        }
+
+        h1 {
+          @apply text-[3.4rem] font-semibold;
+        }
+
+        h3 {
+          @apply text-lg font-semibold;
+          color: $secondary;
+        }
+      }
+    }
+
+    > figure {
+      @apply justify-end;
+
+      > img {
+        @apply h-full object-contain object-bottom;
+      }
+    }
+  }
+}

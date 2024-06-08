@@ -1,0 +1,44 @@
+@import "variables";
+
+#landing-page-publication {
+  @apply pb-12;
+
+  > div {
+    @apply flex gap-2 flex-col items-center justify-center opacity-60;
+
+    > p {
+      @apply text-center;
+    }
+  }
+
+  > section {
+    scroll-snap-type: x mandatory;
+    @apply my-8 gap-8 grid grid-cols-4 items-stretch;
+    @apply tablet:grid-cols-2;
+    @apply mobile:flex mobile:overflow-x-auto mobile:py-5 mobile:gap-4;
+
+    > article {
+      background: $bg-secondary;
+      scroll-snap-align: center;
+      @apply p-4 rounded-lg w-full mobile:min-w-[80vw];
+
+      > img {
+        @apply mb-4 rounded-lg;
+      }
+
+      > h4 {
+        @apply mb-4 font-semibold;
+        color: $primary;
+      }
+
+      > p {
+        @apply text-[0.84rem];
+      }
+
+      > a {
+        @apply underline mt-4;
+        color: $primary;
+      }
+    }
+  }
+}

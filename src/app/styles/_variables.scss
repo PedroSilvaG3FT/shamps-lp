@@ -3,13 +3,13 @@
 
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #f7f7f7;
+  --bg-secondary: #fbfbfb;
   --text-primary: #313131;
 }
 
 // THEME
 $light-bg-primary: #ffffff;
-$light-bg-secondary: #f7f7f7;
+$light-bg-secondary: #fbfbfb;
 $light-text-primary: #313131;
 
 $dark-bg-primary: #111418;
@@ -26,6 +26,7 @@ $placeholder: #9fa3a7b0;
 $danger: map-get($danger-palette, 500);
 $primary: map-get($primary-palette, 500);
 $secondary: map-get($secondary-palette, 500);
+$tertiary: map-get($tertiary-palette, 500);
 
 $bg-primary: var(--bg-primary);
 $bg-secondary: var(--bg-secondary);

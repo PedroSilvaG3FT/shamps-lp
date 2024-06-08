@@ -1,0 +1,55 @@
+@import "variables";
+
+#landing-page-footer {
+  @apply py-12;
+  color: $white;
+  background: $primary;
+
+  > section {
+    @apply flex flex-col py-0;
+
+    > section {
+      @apply mb-12 grid gap-8 grid-cols-[30%_1fr_1fr_1fr_1fr] tablet:grid-cols-1;
+
+      > article {
+        @apply flex gap-4 flex-col;
+
+        > img {
+          @apply w-20 object-contain relative;
+        }
+
+        > p {
+          @apply text-[0.85rem] mb-0;
+        }
+      }
+
+      > div {
+        @apply flex flex-col;
+
+        > h5 {
+          @apply text-[0.85rem] mb-3;
+        }
+
+        > a {
+          @apply mb-2 font-semibold transition-all duration-300;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    > div {
+      @apply mt-auto flex flex-col items-end justify-end tablet:items-center;
+
+      > h5 {
+        @apply text-sm;
+      }
+
+      > img {
+        @apply h-12 cursor-pointer;
+      }
+    }
+  }
+}

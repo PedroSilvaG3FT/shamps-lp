@@ -1,0 +1,19 @@
+@import "variables";
+
+#landing-page-about {
+  @apply grid grid-cols-[380px_1fr] mobile:flex mobile:flex-col;
+
+  > figure {
+    @apply relative left-4 mobile:left-0 mobile:mt-8 mobile:order-2;
+    color: $secondary;
+
+    > video {
+      @apply mb-4 h-96 w-80 object-cover object-center rounded-xl shadow-lg mobile:w-full mobile:object-contain mobile:bg-[#000000];
+
+      &::after {
+        @apply content-[''] z-10 absolute top-0 left-0 w-full h-full rounded-lg;
+        background: $primary;
+      }
+    }
+  }
+}

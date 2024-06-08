@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { MEMBER_ROUTES } from './modules/member/pages/router';
 
 export const routes: Routes = [
   {
@@ -7,5 +6,11 @@ export const routes: Routes = [
     redirectTo: '',
     pathMatch: 'full',
   },
-  ...MEMBER_ROUTES,
+  {
+    path: '',
+    loadComponent: () =>
+      import('../app/modules/landing-page/landing-page.component').then(
+        (c) => c.LandingPageComponent
+      ),
+  },
 ];

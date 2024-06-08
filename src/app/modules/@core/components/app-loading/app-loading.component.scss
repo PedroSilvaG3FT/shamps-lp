@@ -5,6 +5,12 @@
   backdrop-filter: blur(2px);
   background: #151515cc;
 
+  > figure {
+    > img {
+      @apply h-12 object-contain;
+    }
+  }
+
   > h4 {
     @apply font-semibold;
     color: $white;

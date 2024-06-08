@@ -1,0 +1,16 @@
+:root {
+  //button
+  --mdc-filled-button-container-shape: 12px !important;
+  --mdc-outlined-button-container-shape: 12px !important;
+
+  --mdc-text-button-container-height: 48px;
+  --mdc-filled-button-container-height: 48px;
+  --mdc-outlined-button-container-height: 48px;
+  --mdc-protected-button-container-height: 48px;
+
+  //accordion
+  --mat-expansion-container-shape: 12px;
+
+  //Dialog/Modal
+  --mdc-dialog-container-shape: 12px;
+}

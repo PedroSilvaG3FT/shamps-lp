@@ -1,3 +1,6 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
 @function generate-theme(
   $primary,
   $accent,
@@ -7,11 +10,15 @@
   $isDark
 ) {
   @return (
-    warn: $warn,
-    accent: $accent,
-    primary: $primary,
-    is-dark: $isDark,
-    background: $background,
-    foreground: $foreground
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+      background: $background,
+      foreground: $foreground,
+    ),
+    typography: mat.define-typography-config(),
+    density: mat.define-density-config(),
+    is-dark: $isDark
   );
 }

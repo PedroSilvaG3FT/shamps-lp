@@ -1,0 +1,39 @@
+@import "variables";
+
+#landing-page-proposals {
+  > section {
+    @apply pl-4 mt-16 gap-8 grid grid-cols-4 items-stretch;
+    @apply tablet:gap-y-12 tablet:grid-cols-2;
+    @apply mobile:grid-cols-1;
+
+    > article {
+      background: $bg-secondary;
+      @apply relative p-6 rounded-xl shadow-md w-full;
+
+      > * {
+        @apply cursor-default;
+      }
+
+      &:hover {
+        > figure {
+          @apply scale-105;
+        }
+      }
+
+      > figure {
+        @apply absolute left-[-18px] top-[-24px] text-[1.8rem] w-14 h-14 rounded-lg flex items-center justify-center transition-all duration-500;
+        background: $primary;
+        color: $secondary;
+      }
+
+      > h3 {
+        @apply my-3 font-semibold;
+        color: $primary;
+      }
+
+      > p {
+        @apply text-[0.84rem];
+      }
+    }
+  }
+}

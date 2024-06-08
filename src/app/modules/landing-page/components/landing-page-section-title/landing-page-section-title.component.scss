@@ -1,0 +1,14 @@
+@import "variables";
+
+#landing-page-section-title {
+  @apply mb-8;
+
+  > h1 {
+    @apply mb-0 text-xl font-semibold flex gap-2 items-center;
+    color: $primary;
+  }
+
+  > h2 {
+    @apply opacity-60;
+  }
+}

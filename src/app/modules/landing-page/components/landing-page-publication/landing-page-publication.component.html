@@ -1,0 +1,22 @@
+<section class="app-container" id="landing-page-publication">
+  <app-landing-page-section-title
+    [title]="'Publicações'"
+    description="Fique por dentro das últimas novidades e ações da campanha!"
+  />
+
+  <section animate animationScroll animation="animate__fadeIn">
+    @for (item of publications; track $index) {
+    <article>
+      <img [src]="item.image" [alt]="item.title" />
+      <h4>{{ item.title }}</h4>
+      <p>{{ item.description }}</p>
+      <a [href]="item.link" target="_blank">Saiba mais</a>
+    </article>
+    }
+  </section>
+
+  <div animate animationScroll animation="animate__zoomInUp">
+    <p>Acompanhe mais por meio das minhas redes oficiais</p>
+    <app-social-media ngSkipHydration />
+  </div>
+</section>
