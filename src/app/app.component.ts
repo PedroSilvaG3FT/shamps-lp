@@ -8,6 +8,7 @@ import { Component, inject, afterNextRender } from '@angular/core';
 import { ThemeService } from './modules/@core/services/theme.service';
 import { ROUTER_STACK_ANIMATION } from './modules/@core/animations/router-stack.animation';
 import { AppLoadingComponent } from './modules/@core/components/app-loading/app-loading.component';
+import { AnalyticsService } from './modules/@core/services/analytics.service';
 
 @Component({
   standalone: true,
@@ -19,6 +20,7 @@ import { AppLoadingComponent } from './modules/@core/components/app-loading/app-
 })
 export class AppComponent {
   public loadingStore = inject(LoadingStore);
+  public analyticsService = inject(AnalyticsService);
 
   constructor(
     private seoService: SEOService,
@@ -28,6 +30,7 @@ export class AppComponent {
       Iconify.listIcons();
       this.checkLoading();
       this.themeService.init();
+      this.analyticsService.init();
       this.seoService.initTitleMonitoring();
     });
   }

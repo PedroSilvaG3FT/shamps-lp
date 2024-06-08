@@ -9,6 +9,7 @@ import { FormGeneratorService } from '../../../@core/components/_form-generator/
 import { AppSocialMediaComponent } from '../../../@core/components/app-social-media/app-social-media.component';
 import { LandingPageSectionTitleComponent } from '../landing-page-section-title/landing-page-section-title.component';
 import { AppFormGeneratorComponent } from '../../../@core/components/_form-generator/app-form-generator/app-form-generator.component';
+import { AnalyticsService } from '../../../@core/services/analytics.service';
 
 @Component({
   standalone: true,
@@ -26,6 +27,7 @@ import { AppFormGeneratorComponent } from '../../../@core/components/_form-gener
 export class LandingPageContactComponent {
   private _snackBar = inject(MatSnackBar);
   private _loadingStore = inject(LoadingStore);
+  private _analyticsService = inject(AnalyticsService);
   private _suggestionService = inject(SuggestionService);
   private _formGeneratorService = inject(FormGeneratorService);
 
@@ -67,6 +69,12 @@ export class LandingPageContactComponent {
         });
 
         this.form.group.reset();
+
+        this._analyticsService.emit('send_suggestion_success', {
+          date: new Date(),
+          author: contactDTO.author,
+          suggestion: contactDTO.suggestion,
+        });
       })
       .catch(() => {
         this._loadingStore.setState(false);
@@ -75,6 +83,12 @@ export class LandingPageContactComponent {
           'Ok',
           { duration: 8000 }
         );
+
+        this._analyticsService.emit('send_suggestion_error', {
+          date: new Date(),
+          author: contactDTO.author,
+          suggestion: contactDTO.suggestion,
+        });
       });
   }
 }
