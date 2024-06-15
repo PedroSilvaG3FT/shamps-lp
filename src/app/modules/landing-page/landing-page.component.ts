@@ -6,6 +6,7 @@ import { LandingPageFooterComponent } from './components/landing-page-footer/lan
 import { LandingPageContactComponent } from './components/landing-page-contact/landing-page-contact.component';
 import { LandingPageProposalsComponent } from './components/landing-page-proposals/landing-page-proposals.component';
 import { LandingPagePublicationComponent } from './components/landing-page-publication/landing-page-publication.component';
+import { LandingPageWorksComponent } from './components/landing-page-works/landing-page-works.component';
 
 @Component({
   standalone: true,
@@ -13,6 +14,7 @@ import { LandingPagePublicationComponent } from './components/landing-page-publi
   imports: [
     LandingPageHeroComponent,
     LandingPageAboutComponent,
+    LandingPageWorksComponent,
     LandingPageFooterComponent,
     LandingPageContactComponent,
     LandingPageProposalsComponent,
@@ -22,6 +24,7 @@ import { LandingPagePublicationComponent } from './components/landing-page-publi
     <app-landing-page-hero />
     <app-landing-page-proposals ngSkipHydration />
     <app-landing-page-about />
+    <app-landing-page-works ngSkipHydration />
     <app-landing-page-contact />
     <app-landing-page-publication />
     <app-landing-page-footer />

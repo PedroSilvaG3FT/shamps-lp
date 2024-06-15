@@ -16,4 +16,12 @@
       }
     }
   }
+
+  p {
+    @apply mb-4;
+
+    > b {
+      color: $primary;
+    }
+  }
 }

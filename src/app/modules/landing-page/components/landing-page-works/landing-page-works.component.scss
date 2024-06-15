@@ -1,0 +1,17 @@
+@import "variables";
+
+#landing-page-works {
+  @apply grid gap-4 grid-cols-[1fr_380px] mobile:flex mobile:flex-col;
+
+  p {
+    @apply mb-4;
+
+    > b {
+      color: $primary;
+    }
+  }
+
+  > img {
+    @apply rounded-xl shadow-md;
+  }
+}
